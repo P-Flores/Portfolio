@@ -1,0 +1,41 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portafolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run lite",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/@fortawesome/fontawesome-free/webfonts/* dist/webfonts",
+    "copyimg": "copyfiles -f img/* dist/img",
+    "imagemin": "imagemin img/* --out-dir='dist/img'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "build": "npm run clean && npm run copyfonts && npm run copyimg && npm run usemin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/P-Flores/Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/P-Flores/Portfolio/issues"
+  },
+  "homepage": "https://github.com/P-Flores/Portfolio#readme",
+  "devDependencies": {
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.7",
+    "lite-server": "^2.5.4",
+    "rimraf": "^3.0.2",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.6.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
