@@ -8,11 +8,12 @@
     "clean": "rimraf dist",
     "copyfonts": "copyfiles -f node_modules/@fortawesome/fontawesome-free/webfonts/* dist/webfonts",
     "copyimg": "copyfiles -f img/* dist/img",
+    "copyfavicon": "copyfiles -f site.webmanifest *.png favicon.ico dist/",
     "imagemin": "imagemin img/* --out-dir='dist/img'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
     "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
-    "build": "npm run clean && npm run copyfonts && npm run copyimg && npm run usemin"
+    "build": "npm run clean && npm run copyfonts &&  npm run copyfavicon && npm run copyimg && npm run usemin"
   },
   "repository": {
     "type": "git",
